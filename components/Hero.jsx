@@ -56,7 +56,7 @@ export default function Hero() {
                      <span className="text-yellow-300">{places[placeIndex]}</span>
                   </h1>
                </div>
-               <div className="hidden w-1/2 lg:block">
+               <div className="items-center justify-center hidden w-1/2 lg:flex">
                   <img src="bus-mockup-v0.webp" className="h-[50vh] w-auto" alt="bus" />
                </div>
             </div>
