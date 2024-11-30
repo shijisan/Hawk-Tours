@@ -1,66 +1,25 @@
-"use client";
+import Hero from "@/components/Hero";
 
-import { useEffect, useState } from "react";
+export default function HomePage(){
+	return(
+	<>
+		<Hero/>
+		
+		<section className="lg:h-[40vh]">
+            <div className="flex items-center justify-center w-full h-full">
+               <div className="p-5 bg-white lg:w-[80vw] rounded">
+                  <h2 className="mb-4 text-4xl">Booking</h2>
+                  <p className="px-4 mb-6 indent-16">
+                     Whether you're looking to reserve a seat for your next trip or need an entire bus for a private journey, we've got you covered. Choose between <a className="text-blue-500 hover:underline" href="#">Book Seats</a> for individual travel or <a className="text-blue-500 hover:underline" href="#">Private Booking</a> for exclusive use of the vehicle. Plan your trip with ease and enjoy a seamless travel experience tailored to your needs.
+                  </p>
 
-export default function HomePage() {
-  const [isTuah, setIsTuah] = useState(false);
-  const [placeIndex, setPlaceIndex] = useState(0);
-
-  const places = [
-    "Boracay",
-    "Palawan",
-    "Baguio",
-    "Siargao",
-    "Cebu",
-    "Davao",
-    "Batanes",
-    "Vigan",
-    "Camiguin",
-    "Coron",
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTuah(true);
-      const timeout = setTimeout(() => {
-        setIsTuah(false);
-      }, 3000);
-      return () => clearTimeout(timeout);
-    }, 24000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const placeInterval = setInterval(() => {
-      setPlaceIndex((prevIndex) => (prevIndex + 1) % places.length);
-    }, 4000);
-
-    return () => clearInterval(placeInterval);
-  }, [places.length]);
-
-  return (
-    <>
-      <header className="max-h-[60vh] pt-[10vh]">
-        <div
-          className="flex w-full h-full"
-          style={{ backgroundImage: "url('hero-bg.webp')", backgroundSize: "cover" }}
-        >
-          <div className="flex items-center justify-center p-5 bg-opacity-70 lg:w-1/2 bg-slate-900">
-            <h1 className="text-6xl text-center text-white w-96">
-              <span className="text-yellow-300">
-                Hawk {isTuah ? "Tuah!" : "Tours!"}
-              </span>{" "}
-              Travel to
-              <br />
-              <span className="text-yellow-300">{places[placeIndex]}</span>
-            </h1>
-          </div>
-          <div className="lg:w-1/2">
-            <img src="bus-mockup-v0.webp" className="h-[50vh] w-auto" alt="bus" />
-          </div>
-        </div>
-      </header>
-    </>
-  );
+                  <div className="flex items-center justify-center w-full h-full">
+                     <a className="w-40 p-2 text-center bg-yellow-300 rounded-s border-e" href="">Book Seats</a>
+                     <a className="w-40 p-2 text-center bg-yellow-300 rounded-e border-s" href="">Private Booking</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+	</>
+	);
 }
