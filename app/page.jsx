@@ -7,7 +7,7 @@ export default function HomePage() {
 		<>
 			<Hero />
 
-			<section className="lg:h-[40vh]">
+			<section className="lg:h-[40vh] h-screen">
 				<div className="flex items-center justify-center w-full h-full">
 					<div className="p-5 bg-white lg:w-[80vw] w-full rounded shadow">
 						<div className="inline-flex items-center mb-2 text-4xl font-medium">
@@ -15,13 +15,13 @@ export default function HomePage() {
 							<h2 className="">Booking</h2>
 						</div>
 						<hr />
-						<p className="px-4 mt-2 mb-6 indent-16">
+						<p className="px-4 mt-2 mb-6 text-justify md:indent-16 md:text-start">
 							Whether you're looking to reserve a seat for your next trip or need an entire bus for a private journey, we've got you covered. Choose between <a className="text-blue-500 hover:underline" href="#">Book Seats</a> for individual travel or <a className="text-blue-500 hover:underline" href="#">Private Booking</a> for exclusive use of the vehicle. Plan your trip with ease and enjoy a seamless travel experience tailored to your needs.
 						</p>
 
-						<div className="flex items-center justify-center w-full h-full gap-1">
-							<a className="inline-flex items-center justify-center w-40 p-2 text-center bg-yellow-300 hover:bg-yellow-400 rounded-s" href=""><FontAwesomeIcon className="w-4 h-4 me-2" icon={faTicket} />Book Seats</a>
-							<a className="inline-flex items-center justify-center w-40 p-2 text-center bg-yellow-300 hover:bg-yellow-400 rounded-e" href=""><FontAwesomeIcon className="w-4 h-4 me-2" icon={faCalendarCheck} />Private Booking</a>
+						<div className="flex items-center justify-center w-full h-full gap-1 text-xs md:text-base">
+							<a className="inline-flex items-center justify-center w-40 p-3 text-center bg-yellow-300 md:p-2 hover:bg-yellow-400 rounded-s" href=""><FontAwesomeIcon className="w-4 h-4 me-2" icon={faTicket} />Book Seats</a>
+							<a className="inline-flex items-center justify-center w-40 p-3 text-center bg-yellow-300 md:p-2 hover:bg-yellow-400 rounded-e" href=""><FontAwesomeIcon className="w-4 h-4 me-2" icon={faCalendarCheck} />Private Booking</a>
 						</div>
 					</div>
 				</div>
@@ -31,14 +31,14 @@ export default function HomePage() {
 				<div className="flex flex-col items-center justify-center w-full h-full">
 					<div className=" bg-white lg:w-[80vw] w-full rounded shadow">
 						<div className="p-5">
-							<div className="inline-flex items-center mb-2 text-4xl font-medium">
+							<div className="inline-flex items-center mb-2 text-3xl font-medium md:text-4xl">
 								<FontAwesomeIcon className="w-8 h-8 me-4" icon={faLocationDot} />
-								<h2>Our Terminals</h2>
+								<h2 className="">Our Terminals</h2>
 							</div>
 							<hr />
 							<div className="mt-2">
-								<p className="px-4 mt-2 mb-6 indent-16">We are available nationwide and ready to serve you in various locations across the Philippines. Here are some of our terminals:</p>
-								<div className="grid grid-cols-2 gap-4 justify-items-center">
+								<p className="px-4 mt-2 mb-6 text-justify md:indent-16 md:text-start">We are available nationwide and ready to serve you in various locations across the Philippines. <b>Here are some of our terminals:</b></p>
+								<div className="grid grid-cols-1 gap-4 p-5 md:grid-cols-2 md:justify-items-center md:p-0">
 									<ul className="list-disc list-inside">
 										<li>Manila Central Terminal</li>
 										<li>Cebu City North Terminal</li>
